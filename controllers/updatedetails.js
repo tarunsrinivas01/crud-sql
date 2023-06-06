@@ -16,6 +16,6 @@ exports.updatedetails=async(req,res,next)=>{
             res.status(400).json({details:"no student records found"})
         }
     } catch (error) {
-        
+        res.status(500).json({err:error})
     }
 }
